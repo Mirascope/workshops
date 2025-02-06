@@ -32,6 +32,9 @@ MANIFEST
 # Node
 node_modules
 
+# Nextra
+.next
+
 # Environments
 .env
 .venv
