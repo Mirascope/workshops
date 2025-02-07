@@ -1,0 +1,84 @@
+[project]
+name = "ai_la_salon_feb_11"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "cachetools>=5.5.1",
+    "python-lilypad[openai]>=0.0.15-alpha.1",
+]
+
+[tool.ruff]
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "venv",
+]
+line-length = 88
+target-version = "py310"
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]
+"tests/*.py" = ["S101", "ANN"]
+"examples/*.{py,ipynb}" = ["T201", "ANN"]
+"docs/*.{py,ipynb}" = ["T201", "ANN"]
+
+[tool.ruff.lint]
+select = [
+    "E",
+    "F",
+    "I",
+    "UP",
+    "YTT",
+    "B",
+    "T10",
+    "T20",
+    "C4",
+    "PYI006",
+    "SIM",
+    "ANN",
+]
+ignore = [
+    'D105',
+    'D107',
+    'D205',
+    'D415',
+    'E402',
+    'E501',
+    'B011',
+    'B028',
+    'B904',
+    'ANN101',
+    'ANN102',
+    'ANN201',
+    'T201',
+]
+fixable = ["ALL"]
+pydocstyle = { convention = 'google' }
+unfixable = []
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
